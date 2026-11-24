@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Scriptorium – Middle-earth Study Hall</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@500;700&family=IM+Fell+English&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<link rel="stylesheet" href="style.css"></head><body>
+<header><h1>The Scriptorium</h1><p>"Not all those who wander are lost – but all who study are wiser."</p><div class="ring"></div></header>
+<main>
+<aside>
+ <div class="card"><h2>⏳ Hourglass of Focus</h2><div class="timer">
+  <div id="clock">25:00</div><div class="small" id="mode">Focus</div>
+  <div class="row" style="justify-content:center;margin-top:8px"><input id="fmin" type="number" min="1" max="120" value="25" style="width:58px"><span class="small">focus</span><input id="bmin" type="number" min="1" max="60" value="5" style="width:58px"><span class="small">rest</span></div>
+  <div class="row" style="justify-content:center"><button id="go">Begin</button><button class="ghost" id="rs">Reset</button></div>
+  <div class="small" id="cnt">Quests completed: 0</div></div></div>
+ <div class="card"><h2>📜 The Archive</h2>
+  <div class="drop" id="drop">Drop scrolls here or click<br><span class="small">PDF · PowerPoint · Word · TXT</span></div>
+  <input id="file" type="file" multiple accept=".pdf,.pptx,.docx,.txt,.md" hidden>
+  <div id="docs" style="margin-top:10px"></div><div class="small" id="sel"></div></div>
+</aside>
+<section class="card"><h2>🧙 The Wizard's Study</h2>
+ <div class="tabs"><button class="tab on" data-t="notes">Notes</button><button class="tab" data-t="quiz">Quiz</button><button class="tab" data-t="cards">Flashcards</button><button class="tab" data-t="ask">Ask Gandalf</button></div>
+ <div id="view"></div></section>
+</main><div id="toast"></div>
+<script src="app.js"></script></body></html>

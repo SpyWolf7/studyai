@@ -1,0 +1,46 @@
+:root{color-scheme:dark;--bg:#14100b;--panel:#211a12;--gold:#d4af37;--gold2:#8a6d1d;--ink:#2b2013;--parch:#eadcb5;--txt:#e8dcc0;--ok:#4e7d3a;--bad:#9b2c2c;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:radial-gradient(ellipse at top,#2c2214,var(--bg) 60%) fixed;color:var(--txt);font:18px/1.55 'IM Fell English',Georgia,serif;min-height:100vh}
+h1,h2,h3,button,.tab{font-family:Cinzel,Georgia,serif}
+header{text-align:center;padding:28px 12px 8px}
+h1{font-family:'Cinzel Decorative',Cinzel,Georgia,serif;color:var(--gold);margin:0;font-size:clamp(1.6rem,5vw,2.8rem);text-shadow:0 0 18px #d4af3755}
+header p{margin:4px 0 0;font-style:italic;color:#bfae82}
+.ring{height:2px;margin:14px auto;max-width:520px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+main{display:grid;grid-template-columns:320px 1fr;gap:20px;max-width:1150px;margin:0 auto;padding:12px 16px 40px}
+@media(max-width:820px){main{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--gold2);border-radius:10px;padding:16px;box-shadow:0 4px 18px #0008,inset 0 0 0 3px #0003;margin-bottom:18px}
+h2{margin:0 0 10px;color:var(--gold);font-size:1.05rem;letter-spacing:.08em;text-transform:uppercase}
+button,select,input{font:inherit}
+button{background:linear-gradient(#e0bd4a,#a8851f);color:#1d1507;border:1px solid #5a4510;border-radius:6px;padding:8px 14px;cursor:pointer;font-weight:700;letter-spacing:.04em}
+button:hover{filter:brightness(1.12)}button:disabled{opacity:.5;cursor:wait}
+button.ghost{background:none;color:var(--gold);border-color:var(--gold2)}
+input,select{background:#150f08;color:var(--txt);border:1px solid var(--gold2);border-radius:6px;padding:7px 9px}
+.drop{border:2px dashed var(--gold2);border-radius:8px;padding:16px;text-align:center;cursor:pointer;color:#bfae82}
+.drop.on{background:#d4af3718;border-color:var(--gold)}
+.doc{display:flex;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid #ffffff12;font-size:.95rem}
+.doc label{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;cursor:pointer}
+.doc input{accent-color:var(--gold)}
+.doc button{padding:2px 8px;background:none;color:#c77;border-color:#633}
+.small{font-size:.85rem;color:#a99a74}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.tab{background:none;color:var(--gold);border:1px solid var(--gold2)}
+.tab.on{background:var(--gold);color:#1d1507}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.out{background:var(--parch);color:var(--ink);border-radius:8px;padding:18px 22px;min-height:120px;box-shadow:inset 0 0 40px #8a6d1d66}
+.out h3{margin:.8em 0 .3em;color:#5b3d0a;border-bottom:1px solid #8a6d1d88}
+.out h3:first-child{margin-top:0}.out ul{padding-left:22px;margin:.3em 0}
+.q{margin-bottom:20px}.q b{display:block;margin-bottom:6px}
+.opt{display:block;width:100%;text-align:left;margin:4px 0;background:#f6edd0;color:var(--ink);border:1px solid #8a6d1d;font-family:inherit;font-weight:400;letter-spacing:0}
+.opt.ok{background:#b9d9a4;border-color:var(--ok)}.opt.no{background:#e5aaaa;border-color:var(--bad)}
+.why{font-style:italic;color:#4a3a1c;margin-top:4px}
+.fc{perspective:900px;margin:0 auto 14px;max-width:520px;height:260px;cursor:pointer}
+.fc div{position:relative;width:100%;height:100%;transition:transform .55s;transform-style:preserve-3d}
+.fc.flip div{transform:rotateY(180deg)}
+.fc span{position:absolute;inset:0;backface-visibility:hidden;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;border:3px double var(--gold2);border-radius:12px;background:var(--parch);color:var(--ink);font-size:1.25rem}
+.fc span+span{transform:rotateY(180deg);background:#2c2214;color:var(--gold)}
+.timer{text-align:center}
+#clock{font:700 3rem Cinzel,Georgia,serif;color:var(--gold);text-shadow:0 0 14px #d4af3766}
+.chat{max-height:380px;overflow:auto;margin-bottom:10px}
+.msg{padding:8px 12px;margin:6px 0;border-radius:8px;background:#f6edd0}.msg.u{background:#d9c58f;text-align:right}
+#toast{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:#000c;border:1px solid var(--gold);color:var(--gold);padding:8px 16px;border-radius:8px;display:none;z-index:9}
